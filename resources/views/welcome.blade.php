@@ -5,6 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <title>Laravel Test</title>
+    {{--@section('title', $posts ? ' My CMS' : '')--}}
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
@@ -78,8 +79,10 @@
                     @endauth
                 </div>
             @endif
+                @foreach($posts as $post)
 
             <div class="content">
+                {{$post->title}}
                 <div class="title m-b-md">
                     Laravel Test
                 </div>
@@ -95,6 +98,8 @@
                     <a href="https://github.com/laravel/laravel">GitHub</a>
                 </div> -->
             </div>
+                @endforeach
+
         </div>
     </body>
 </html>

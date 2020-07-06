@@ -1,7 +1,7 @@
 @extends('layouts.adminLayouts.adminLayout')
 @section('title', $posts ? ' Post List' : '')
 
-@section('title',' Post List')
+{{--@section('title',' Post List')--}}
 @section('content')
     <section class="main--content">
         <div class="panel">

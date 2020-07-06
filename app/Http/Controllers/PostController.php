@@ -11,9 +11,13 @@ class PostController extends Controller
 {
     public function index()
     {
-        $data['posts'] = Post::all();
+//        $data['posts'] = Post::all();
+        $data['section1_posts'] = Post::where('section', 'section1')->get();
+        $data['section2_posts'] = Post::where('section', 'section2')->get();
+//        dd($data);
 
-        return view('admin.post.list', $data);
+//        return view('admin.post.list', $data);
+        return view('frontend.index', $data);
     }
 
     public function create()

@@ -54,8 +54,8 @@
         <!-- Page Header End -->
         <div class="flash-message">
             @foreach (['danger', 'warning', 'success', 'info'] as $msg)
-                @if(\Illuminate\Support\Facades\Session::has('alert-' . $msg))
-                    <p class="alert alert-{{ $msg }}">{{ \Illuminate\Support\Facades\Session::get('alert-' . $msg) }}</p>
+                @if(Session::has('alert-' . $msg))
+                    <p class="alert alert-{{ $msg }}">{{Session::get('alert-' . $msg) }}</p>
                 @endif
             @endforeach
         </div>

@@ -24,7 +24,7 @@ class PostRequest extends FormRequest
             'brief.required' => 'Brief is required!!',
             'type.required' => 'Type is required!!!!',
             'section.required' => 'Section is required!!!!',
-            'file.required' => 'File is required!!!!',
+            'file.required' => 'File is required!!!!'
         ];
     }
 

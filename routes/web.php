@@ -15,8 +15,9 @@ use Illuminate\Support\Facades\Auth;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('frontend.index');
 });
+Route::get('/', 'PostController@index');
 
 Auth::routes();
 

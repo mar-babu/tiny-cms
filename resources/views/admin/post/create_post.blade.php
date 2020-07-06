@@ -29,15 +29,17 @@
                                 <div class="card-body">
                                     <div class="form-group">
                                         <label><span class="label-text">Title <dfn class="text-danger">*</dfn></span></label>
-                                        {!! Form::text('title',null,['class'=>'form-control','placeholder'=>'Enter Title...']) !!}
-                                        <div class="text-danger">{{ $errors->first('title') }}</div>
+                                        {!! Form::text('title',null,['id'=>'title','class'=>'form-control','placeholder'=>'Enter Title...']) !!}
+                                        @if($errors->has('title'))
+                                            <span class="text-danger">{{ $errors->first('title') }}</span>
+                                        @endif
                                     </div>
+
 
                                     <div class="form-group">
                                         <label><span class="label-text">Brief <dfn class="text-danger">*</dfn></span></label>
                                         {!! Form::textarea('brief',null,['class'=>'form-control','placeholder'=>'Enter Brief...']) !!}
                                         <div class="text-danger">{{ $errors->first('brief') }}</div>
-
                                     </div>
 
                                     <div class="form-group">
